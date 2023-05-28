@@ -1,6 +1,6 @@
-# Bootstrap w/ Vite
+# Bootstrap 5 ImpressCMS Theme
 
-Include [Bootstrap](https://getbootstrap.com)'s source Sass and individual JavaScript plugins with [Vite](https://vitejs.dev/).
+Include [Bootstrap](https://getbootstrap.com)'s code from a CDN
 
 ## Edit in browser
 
@@ -8,9 +8,5 @@ Include [Bootstrap](https://getbootstrap.com)'s source Sass and individual JavaS
 
 ## How to use
 
-```sh
-git clone https://github.com/twbs/examples.git
-cd examples/vite/
-npm install
-npm start
-```
+... coming soon ...
+At the moment the base HTML is still being built. The transformation to a theme will come after that.
