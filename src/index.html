@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 mb-2 border-bottom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"><img src="./img/impresscms-logo.svg" height="30"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,88 +51,165 @@
         </nav>
     </div>
 </div>
+
 <div class="container">
-
-    <div class="card xo-block">
-        <div class="card-header">
-            <h2>ImpressCMS Bootstrap 5 Base</h2>
-        </div>
-        <div class="card-body">
-            <p class="fs-4">You've successfully loaded the Bootstrap + Vite example! It's loaded up with <a
-                    href="https://getbootstrap.com/">Bootstrap 5</a> and uses Vite to compile and bundle our Sass and
-                JavaScript.</p>
-            <p>If this button appears blue and the link appears purple, you've done it!</p>
-        </div>
-
-        <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample">Toggle offcanvas
-        </button>
-        <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover"
-           title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
-    </div>
-
-    <div class="card xo-block">
-        <div class="card-header">
-            <h3>Guides</h3>
-        </div>
-        <div class="card-body">
-            <p class="card-text">Read more detailed instructions and documentation on using or contributing to
-                Bootstrap.</p>
-        </div>
-    </div>
-    <div class="xo-canvas-column xo-canvas-leftcolumn">
-        <div class="card xo-block">
-            <div class="card-header">
-                User Menu
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="#">Administration Menu</a></li>
-                <li class="list-group-item"><a href="#" class="actlink">View Account</a></li>
-                <li class="list-group-item"><a href="#" class="menuSub">Notifications</a></li>
-                <li class="list-group-item"><a href="#">Inbox</a></li>
-                <li class="list-group-item"><a href="#">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="xo-page">
-        <div class="card xo-block">
-            <div class="card-header">
-                <h3>Welcome Webmaster!</h3>
-            </div>
-            <div class="card-body">
-                <div class="xo-blockcontent">
-                    <p>Welcome to your new ImpressCMS powered website. If you haven't already, please delete the
-                        <strong>install</strong> folder from the server and ensure that <strong>mainfile.php</strong> is
-                        not writeable (chmod 444).</p>
-                    <p>To begin administering your new ImpressCMS powered website you can click the <strong>Administration</strong>
-                        Menu link located on the left of this page.</p>
-                    <p>You may want to begin by editing your website <strong>Preferences</strong>: In the admin panel,
-                        hover over the <strong>System</strong> dropdown and select <strong>Preferences.</strong></p>
-                    <p>Afterwards you can begin adding <strong>Modules</strong> and <strong>Themes</strong>.</p>
-                    <p>Many of the available modules and themes for ImpressCMS, are available at the <a
-                            href="https://www.impresscms.org/modules/downloads" rel="external"
-                            target="_blank">Addons</a> section of the <a href="https://www.impresscms.org"
-                                                                         rel="external" target="_blank">projects
-                        website</a>.</p>
-                    <p>You will also need to begin using <strong>Blocks</strong>. You can begin by removing this block.
-                        You can do this by navigating to System Admin &gt; Blocks, and the selecting "Webmasters" in the
-                        <strong>Groups</strong> select box. You will then be able to see the blocks available for the
-                        Webmasters group, which this block is!</p>
-                    <p>For more information about working with ImpressCMS, please use the links below.</p>
-                    <ul>
-                        <li>
-                            <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Using_ImpressCMS"
-                               rel="external" target="_blank">Using ImpressCMS</a></li>
-                        <li>
-                            <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Customizing_ImpressCMS"
-                               rel="external" target="_blank">Customizing ImpressCMS</a></li>
-                        <li>
-                            <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Developing_for_ImpressCMS"
-                               rel="external" target="_blank">Developing for ImpressCMS</a></li>
+    <div class="row">
+        <div class="col xo-canvas-column xo-canvas-leftcolumn">
+                <div class="card xo-block">
+                    <div class="card-header">
+                        User Menu
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Administration Menu</a></li>
+                        <li class="list-group-item"><a href="#" class="actlink">View Account</a></li>
+                        <li class="list-group-item"><a href="#" class="menuSub">Notifications</a></li>
+                        <li class="list-group-item"><a href="#">Inbox</a></li>
+                        <li class="list-group-item"><a href="#">Logout</a></li>
                     </ul>
-                    <p>We warmly invite you to join <a href="https://www.impresscms.org/modules/iforum/" rel="external"
-                                                       target="_blank">The ImpressCMS Community</a> - Where you can
-                        make contributions, get help, help others, etc...</p>
+                </div>
+        </div>
+        <div class="col-8 xo-page">
+            <div class="container">
+                <div class="row xo-page-topblocks">
+                    <div class="col xo-page-topleftblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Top Left
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                                    Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6  xo-page-topcenterblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Top Center
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                                    Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col  xo-page-toprightblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Top Right
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                                    Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card xo-block">
+                    <div class="card-header">
+                        <h3>Welcome Webmaster!</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="xo-blockcontent">
+                            <p>Welcome to your new ImpressCMS powered website. If you haven't already, please delete the
+                                <strong>install</strong> folder from the server and ensure that <strong>mainfile.php</strong> is
+                                not writeable (chmod 444).</p>
+                            <p>To begin administering your new ImpressCMS powered website you can click the <strong>Administration</strong>
+                                Menu link located on the left of this page.</p>
+                            <p>You may want to begin by editing your website <strong>Preferences</strong>: In the admin panel,
+                                hover over the <strong>System</strong> dropdown and select <strong>Preferences.</strong></p>
+                            <p>Afterwards you can begin adding <strong>Modules</strong> and <strong>Themes</strong>.</p>
+                            <p>Many of the available modules and themes for ImpressCMS, are available at the <a
+                                    href="https://www.impresscms.org/modules/downloads" rel="external"
+                                    target="_blank">Addons</a> section of the <a href="https://www.impresscms.org"
+                                                                                 rel="external" target="_blank">projects
+                                website</a>.</p>
+                            <p>You will also need to begin using <strong>Blocks</strong>. You can begin by removing this block.
+                                You can do this by navigating to System Admin &gt; Blocks, and the selecting "Webmasters" in the
+                                <strong>Groups</strong> select box. You will then be able to see the blocks available for the
+                                Webmasters group, which this block is!</p>
+                            <p>For more information about working with ImpressCMS, please use the links below.</p>
+                            <ul>
+                                <li>
+                                    <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Using_ImpressCMS"
+                                       rel="external" target="_blank">Using ImpressCMS</a></li>
+                                <li>
+                                    <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Customizing_ImpressCMS"
+                                       rel="external" target="_blank">Customizing ImpressCMS</a></li>
+                                <li>
+                                    <a href="https://www.impresscms.org/modules/simplywiki/index.php?page=English#Developing_for_ImpressCMS"
+                                       rel="external" target="_blank">Developing for ImpressCMS</a></li>
+                            </ul>
+                            <p>We warmly invite you to join <a href="https://www.impresscms.org/modules/iforum/" rel="external"
+                                                               target="_blank">The ImpressCMS Community</a> - Where you can
+                                make contributions, get help, help others, etc...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row xo-page-bottomblocks">
+                    <div class="col xo-page-bottomleftblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Bottom Left
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                                    Bootstrap.</p>
+                            </div>
+                        </div>                    </div>
+                    <div class="col-5 xo-page-bottomcenterblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Bottom Center
+                            </div>
+                            <div class="card-body">
+                                <p class="fs-4">You've successfully loaded the Bootstrap + Vite example! It's loaded up with <a
+                                        href="https://getbootstrap.com/">Bootstrap 5</a> and uses Vite to compile and bundle our Sass and
+                                    JavaScript.</p>
+                                <p>If this button appears blue and the link appears purple, you've done it!</p>
+                            </div>
+
+                            <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasExample">Toggle offcanvas
+                            </button>
+                            <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover"
+                               title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
+                        </div>
+                    </div>
+                    <div class="col xo-page-bottomrightblocks">
+                        <div class="card xo-block">
+                            <div class="card-header">
+                                Bottom Right
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                                    Bootstrap.</p>
+                            </div>
+                        </div>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col xo-canvas-column xo-canvas-rightcolumn">
+            <div class="card xo-block">
+                <div class="card-header">
+                    Guides
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                        Bootstrap.</p>
+                </div>
+            </div>
+            <div class="card xo-block">
+                <div class="card-header">
+                    Guides
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Read more detailed instructions and documentation on using or contributing to
+                        Bootstrap.</p>
                 </div>
             </div>
         </div>

@@ -3,7 +3,21 @@ footer {
     background-image :linear-gradient( #58d4fa,#578ec1);
     color : white;
 }
+.nav-item {
+    font-size: large;
+}
+.nav-item a {
+    color: white;
+}
 
+.navbar-nav .nav-link.active {
+    color: white;
+    font-weight: bold;
+}
+
+.xo-block{
+    border-
+}
 .xo-block .card-header
 {
     color: blue;
@@ -41,11 +55,11 @@ footer {
 }
 
 .xo-canvas-leftcolumn .card-header {
-    text-align: right;
+    text-align: left;
 }
 
 .xo-canvas-rightcolumn .card-header {
-    text-align : left;
+    text-align : right;
 }
 
 .xo-canvas-column li a {
@@ -57,6 +71,7 @@ footer {
     padding-left: 30px;
 }
 
-.xo-canvas-column li a.actlink {
+.xo-canvas-column li a.actlink
+{
     font-weight: bold;
 }
