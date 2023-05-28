@@ -1,18 +1,16 @@
-header {
+header,
+footer {
     background-image :linear-gradient( #58d4fa,#578ec1);
     color : white;
 }
 
-.xo-block .card-body {
-    background-color: #f0f0f0;
-}
-
-.xo-block > .card-header
+.xo-block .card-header
 {
     color: blue;
     border-bottom-width : 2px;
     border-bottom-color : coral;
     text-align: center;
+    background-color: white;
 }
 
 .xo-canvas-column .card-header
@@ -21,6 +19,11 @@ header {
     border-bottom-width : 1px;
     border-bottom-style: dashed;
     border-bottom-color : dodgerblue;
+    font-weight: bold;
+}
+
+.xo-page .xo-block .card-body {
+    background-color: #f0f0f0;
 }
 
 .xo-canvas-column .card-body
@@ -47,6 +50,7 @@ header {
 
 .xo-canvas-column li a {
     padding-left: 15px;
+    text-decoration-line: none;
 }
 
 .xo-canvas-column li a.menuSub {
