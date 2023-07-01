@@ -15,16 +15,14 @@ footer {
     font-weight: bold;
 }
 
-.xo-block{
-    border-
-}
 .xo-block .card-header
 {
     color: blue;
-    border-bottom-width : 2px;
+    border-bottom-width : 3px;
     border-bottom-color : coral;
     text-align: center;
     background-color: white;
+    font-weight: bold;
 }
 
 .xo-canvas-column .card-header
@@ -42,9 +40,6 @@ footer {
 
 .xo-canvas-column .card-body
 {
-    border-bottom-width : 1px;
-    border-bottom-style: dashed;
-    border-bottom-color : dodgerblue;
     text-align: left;
 }
 .xo-canvas-column .list-group-item
@@ -75,3 +70,4 @@ footer {
 {
     font-weight: bold;
 }
+
