@@ -15,6 +15,10 @@ footer {
     font-weight: bold;
 }
 
+.card {
+    border: none;
+}
+
 .xo-block .card-header
 {
     color: blue;

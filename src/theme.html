@@ -29,7 +29,7 @@
 		</nav>
 	</div>
 </div>
-<div class="container-md">
+<div class="container-fluid">
 	<div class="row">
 		<{if $xoBlocks.canvas_left}>
 		<div class="col-md-2 col-xs-12 xo-canvas-column xo-canvas-leftcolumn">
@@ -45,15 +45,12 @@
 				<div class="row xo-page-topblocks">
 					<div class="col-md col-sm-12 xo-page-topleftblocks">
 						<{if $xoBlocks.page_topleft}>
-						topleft
 						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topleft zoneClass="zone_page_topleft" zoneContainer=0}>
 						<{/if}>
 						<{if $xoBlocks.page_topcenter}>
-						topcenter
 						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topcenter zoneClass="zone_page_topcenter" zoneContainer=0}>
 						<{/if}>
 						<{if $xoBlocks.page_topright}>
-						topright
 						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topright zoneClass="zone_page_topright" zoneContainer=0}>
 						<{/if}>
 					</div>
@@ -64,23 +61,30 @@
 				<{$icms_contents}>
 			</div>
 			<{/if}>
-			<{if $xoBlocks.page_bottomleft || $xoBlocks.page_center || $xoBlocks.page_bottomright}>
+
 			<div class="container">
 				<div class="row xo-page-bottomblocks">
-					<div class="col-md col-sm-12 xo-page-bottomleftblocks">
 						<{if $xoBlocks.page_bottomleft}>
+					<div class="col xo-page-bottomleftblocks">
 						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_bottomleft zoneClass="zone_page_bottomleft" zoneContainer=0}>
-						<{/if}>
-						<{if $xoBlocks.page_bottomcenter}>
-						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_bottomcenter zoneClass="zone_page_bottomcenter" zoneContainer=0}>
-						<{/if}>
-						<{if $xoBlocks.page_bottomright}>
-						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_bottomright zoneClass="zone_page_bottomright" zoneContainer=0}>
-						<{/if}>
 					</div>
+						<{/if}>
+
+						<{if $xoBlocks.page_bottomcenter}>
+					<div class="col xo-page-bottomblocks">
+						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_bottomcenter zoneClass="zone_page_bottomcenter" zoneContainer=0}>
+					</div>
+						<{/if}>
+
+						<{if $xoBlocks.page_bottomright}>
+					<div class="col xo-page-bottomrightblocks">
+						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_bottomright zoneClass="zone_page_bottomright" zoneContainer=0}>
+					</div>
+						<{/if}>
+
 				</div>
 			</div>
-			<{/if}>
+
 		</div>
 		<{if $xoBlocks.canvas_right}>
 		<div class="col-md-2 col-xs-12 xo-canvas-column xo-canvas-rightcolumn">
@@ -94,62 +98,6 @@
 	</div>
 
 </div>
-
-<footer>
-	<div class="container text-center">
-		<div class="row py-5 border-top">
-			<p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
-		</div>
-		<div class="row">
-			<div class="col mb-3">
-				<a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-					<svg class="bi me-2" width="40" height="32">
-						<use xlink:href="#bootstrap"></use>
-					</svg>
-				</a>
-				<p class="text-body-secondary">© 2023</p>
-			</div>
-
-			<div class="col mb-3">
-				<h5>Section</h5>
-			</div>
-
-			<div class="col mb-3">
-				<h5>Section</h5>
-				<ul class="nav flex-column">
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-				</ul>
-			</div>
-
-			<div class="col mb-3">
-				<h5>Section</h5>
-				<ul class="nav flex-column">
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-				</ul>
-			</div>
-
-			<div class="col mb-3">
-				<h5>Section</h5>
-				<ul class="nav flex-column">
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
+<{includeq file="$theme_name/templates/footer.html.tpl"}>
 </body>
 </html>
