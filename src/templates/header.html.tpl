@@ -1,60 +1,20 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-        </a>
+<nav class="navbar navbar-expand-lg py-3 mb-2 border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="<{$icms_url}>" aria-label="<{$icms_sitename}> Home"><img src="<{$icms_imageurl}>img/impresscms-logo.svg" alt="<{$icms_sitename}> logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <{if $xoBlocks.page_menu}>
+        <div class="d-flex justify-content-center collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
+                <{if $xoBlocks.page_menu}>
+                <{includeq file="$theme_name/templates/blockszone_menu.html.tpl" blocks=$xoBlocks.page_menu zone="menu"}>
+                <{/if}>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item">
-                Home
-            </a>
-
-            <a class="navbar-item">
-                Documentation
-            </a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    More
-                </a>
-
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        About
-                    </a>
-                    <a class="navbar-item">
-                        Jobs
-                    </a>
-                    <a class="navbar-item">
-                        Contact
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        Report an issue
-                    </a>
-                </div>
-            </div>
+            </ul>
         </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
-                </div>
-            </div>
-        </div>
+        <{/if}>
     </div>
 </nav>
