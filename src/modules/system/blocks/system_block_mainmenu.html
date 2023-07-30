@@ -1,3 +1,13 @@
+<{if $xoBlocks.page_menu}>
+<li class="nav-item">
+	<a class="nav-link" aria-current="page" href="#">Home</a>
+</li>
+<{foreach item=module from=$block.modules}>
+<li class="nav-item">
+	<a class="nav-link <{if $xoops_dirname==$module.directory}>actlink<{/if}>" href="<{$xoops_url}>/modules/<{$module.directory}>/" title="<{$module.name}>"><{$module.name}></a>
+</li>
+<{/foreach}>
+<{else}>
 <ul class="list-group list-group-flush">
 	<li class="list-group-item"><a <{if $xoops_dirname=='system'}>class="menuTop actlink"<{/if}> href="<{$xoops_url}>/" title="<{$block.lang_home}>"><{$block.lang_home}></a></li>
 	<{foreach item=module from=$block.modules}>
@@ -15,3 +25,4 @@
 	<li class="list-group-item"><a class="<{if $xoops_dirname=='system'}> actlink<{/if}>" href="<{$xoops_url}>/privpolicy.php" title="<{$block.lang_privpolicy}>"><{$block.lang_privpolicy}></a></li>
 	<{/if}>
 </ul>
+<{/if}>
