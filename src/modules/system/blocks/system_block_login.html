@@ -1,10 +1,10 @@
   <div class="container">
     <form id="block_login_form" action="<{$xoops_url}>/user.php" method="post">
-    <div>
+    <div class="mb-3">
         <label class="form-label" for="uname"><{$block.lang_username}></label>
         <input type="text" name="uname" class="form-control" id="uname" value="<{$block.unamevalue}>" maxlength="25" />
     </div>
-    <div class="form-outline">
+    <div class="mb-3">
         <label class="form-label" for="pass"><{$block.lang_password}></label>
         <input type="password" name="pass" id="pass" class="form-control" maxlength="32" />
     </div>
@@ -16,7 +16,7 @@
     <{/if}>
     <div><input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" /></div>
     <div><input type="hidden" name="op" value="login" /></div>
-    <div class="form"><input type="submit" value="<{$block.lang_login}>" /></div>
+        <button type="submit" class="btn btn-primary mb-3"><{$block.lang_login}></button>
     <{$block.sslloginlink}>
   </form>
 
