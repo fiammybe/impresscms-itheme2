@@ -4,9 +4,9 @@
     <!-- start of form elements loop -->
     <{foreach item=element from=$form.elements}>
       <{if $element.section == true}>
-        <p>section <{$element.body}></p>
+        <p><{$element.body}></p>
       <{elseif $element.section_close == true}>
-        <p>section close <{$element.body}></p>
+        <p><{$element.body}></p>
       <{elseif $element.hidden != true}>
         <div class="form-outline" id="<{$element.name}>_row">
           <label for="<{$element.name}>" class="form-label"><{$element.caption}><{if $element.required}> <span style='color:#f00'>*</span><{/if}></label>
