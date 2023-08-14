@@ -1,0 +1,27 @@
+  <div class="card mb-4">
+    <div class="d-flex card-header"><{$comment.title}></div>
+      <{if $xoops_iscommentadmin == true}>
+      <div class="d-flex justify-content-end">
+        <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><i class="bi-pencil"></i><span class="small"> <{$lang_edit}> </span></a>
+        <a href="<{$deletecomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_delete}>"><i class="bi-trash3"></i><span class="small"> <{$lang_delete}> </span></a>
+        <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
+
+      <{/if}>
+    </div>
+
+    <div class="card-body">
+      <p><{$comment.text}></p>
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-row align-items-center">
+          <img
+                  src="<{$comment.poster.avatar}>"
+                  alt="avatar"
+                  width="25"
+                  height="25"
+          />
+          <p class="small mb-0 ms-2"><{$comment.poster.uname}></p>
+        </div>
+      </div>
+    </div>
+  </div>
