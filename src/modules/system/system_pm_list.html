@@ -1,0 +1,87 @@
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="<{$icms_url}>/userinfo.php?uid=<{$user.uid}>" title="<{$user.name}>"><{$smarty.const._PROFILE}></a></li>
+		<li class="breadcrumb-item active" aria-current="page"><{$smarty.const._PM_INBOX}></li>
+	</ol>
+</nav>
+
+<form id="prvmsg" method="post" action="viewpmsg.php">
+	<{if $total_messages == 0}>
+	<div>bla</div>
+	<{else}>
+	<div class="list-group">
+		<label class="list-group-item d-flex gap-2">
+			<input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="">
+			<span>
+        First checkbox
+        <small class="d-block text-body-secondary">With support text underneath to add more detail</small>
+      </span>
+		</label>
+		<label class="list-group-item d-flex gap-2">
+			<input class="form-check-input flex-shrink-0" type="checkbox" value="">
+			<span>
+        Second checkbox
+        <small class="d-block text-body-secondary">Some other text goes here</small>
+      </span>
+		</label>
+		<label class="list-group-item d-flex gap-2">
+			<input class="form-check-input flex-shrink-0" type="checkbox" value="">
+			<span>
+        Third checkbox
+        <small class="d-block text-body-secondary">And we end with another snippet of text</small>
+      </span>
+		</label>
+	</div>
+	<{/if}>
+</form>
+
+echo "<form id='prvmsg' method='post' action='viewpmsg.php'>";
+	echo "<table border='0' cellspacing='1' cellpadding='4' width='100%' class='outer'>\n";
+		echo "<tr align='center' valign='middle'><th>"
+			. "<input name='allbox' id='allbox' onclick='xoopsCheckAll(\"prvmsg\", \"allbox\");'"
+			. "type='checkbox' value='Check All' /></th><th>"
+			. "<img src='images/download.gif' alt='' /></th><th>&nbsp;</th><th>"
+			. _PM_FROM . "</th><th>" . _PM_SUBJECT . "</th><th align='center'>" . _PM_DATE . "</th></tr>\n";
+		$total_messages = count($pm_arr);
+		if ($total_messages == 0) {
+		echo "<tr><td class='even' colspan='6' align='center'>" . _PM_YOUDONTHAVE . "</td></tr>";
+		$display = 0;
+		} else {
+		$display = 1;
+		}
+
+		for ($i = 0; $i < $total_messages; $i++) {
+		$class = ($i % 2 == 0) ? 'even' : 'odd';
+		echo "<tr align='" . _GLOBAL_LEFT . "' class='$class'>"
+			. "<td style='vertical-align: middle; width: 2%; text-align: center;'><input type='checkbox' id='message_"
+		. $pm_arr[$i]->getVar('msg_id') . "' name='msg_id[]' value='" . $pm_arr[$i]->getVar('msg_id') . "' /></td>\n";
+			if ($pm_arr[$i]->getVar('read_msg') == 1) {
+			echo "<td style='vertical-align: middle; width: 5%; text-align: center;'>&nbsp;</td>\n";
+			} else {
+			echo "<td style='vertical-align: middle; width: 5%; text-align: center;'>"
+				. "<img src='images/read.gif' alt='" . _PM_NOTREAD . "' /></td>\n";
+			}
+			echo "<td style='vertical-align: middle; width: 5%; text-align: center;'>"
+				. "<img src='images/subject/" . $pm_arr[$i]->getVar('msg_image', 'E') . "' alt='' /></td>\n";
+			$postername = icms_member_user_Object::getUnameFromId($pm_arr[$i]->getVar('from_userid'));
+			echo "<td style='vertical-align: middle; width: 10%; text-align: center;'>";
+				// no need to show deleted users
+				if ($postername) {
+				echo "<a href='userinfo.php?uid=". (int) ($pm_arr[$i]->getVar('from_userid')) . "'>" . $postername . "</a>";
+				} else {
+				echo $icmsConfig['anonymous'];
+				}
+				echo "</td>\n";
+			echo "<td valign='middle' style='vertical-align: middle;'><a href='readpmsg.php?start="
+		. (int) (($total_messages-$i-1)) . "&amp;total_messages="
+		. (int) $total_messages . "'>" . $pm_arr[$i]->getVar('subject') . "</a></td>";
+			echo "<td style='vertical-align: middle; width: 30%; text-align: center;'>"
+				. formatTimestamp($pm_arr[$i]->getVar('msg_time')) . "</td></tr>";
+		}
+
+		if ($display == 1) {
+		echo "<tr class='foot' align='" . _GLOBAL_LEFT . "'><td colspan='6' align='" . _GLOBAL_LEFT
+		. "'><input type='button' class='formButton' onclick='javascript:openWithSelfMain(\""
+		. ICMS_URL . "/pmlite.php?send=1\",\"pmlite\",800,680);' value='"
+		. _PM_SEND . "' />&nbsp;<input type='submit' class='formButton' name='delete_messages' value='"
+		. _PM_DELETE . "' />" . icms::$security->getTokenHTML() . "</td></tr></table></form>";
