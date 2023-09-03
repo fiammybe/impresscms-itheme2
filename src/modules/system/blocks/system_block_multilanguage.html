@@ -1,0 +1,9 @@
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><{$block.current_language}></a>
+	<ul class="dropdown-menu">
+		<{foreach item=language from=$block.ml_tag}>
+		<li class="nav-item"><a class="nav-link" href="?lang=<{$language.tag}>">
+			<img src='<{$language.image}>' alt="<{$language.name}>"><br/><{$language.name}></a></li>
+		<{/foreach}>
+	</ul>
+</li>
