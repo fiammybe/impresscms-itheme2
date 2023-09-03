@@ -29,7 +29,7 @@ footer {
     font-weight: bold;
 }
 
-.xo-canvas-column .card-header
+.xo-canvas-column .nav-heading
 {
     color: coral;
     border-bottom-width : 1px;
@@ -46,11 +46,15 @@ footer {
 {
     text-align: left;
 }
-.xo-canvas-column .list-group-item
+.xo-canvas-column .nav li
 {
     border-bottom: blue;
     border-bottom-style: dashed;
     border-bottom-width: 1px;
+}
+.xo-canvas-column .nav li a
+{
+    color: blue;
 }
 
 .xo-canvas-leftcolumn .card-header {
