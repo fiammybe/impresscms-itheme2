@@ -1,4 +1,3 @@
-
 <{foreach from=$blocks item=block}>
 <div class="card xo-block">
     <{if $block.title}>   <div class="card-header">

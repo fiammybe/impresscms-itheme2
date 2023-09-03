@@ -22,9 +22,9 @@
 <div class="container-fluid">
 	<div class="row">
 		<{if $xoBlocks.canvas_left}>
-		<div class="col-md-2 col-xs-12 xo-canvas-column xo-canvas-leftcolumn">
+		<div class="col-md-2 xo-canvas-column xo-canvas-leftcolumn d-none d-md-block">
 			<div class="container">
-		<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.canvas_left
+		<{includeq file="$theme_name/templates/blockszone_menu.html.tpl" blocks=$xoBlocks.canvas_left
 		zoneClass='xo-canvas-column' zoneId='xo-canvas-leftcolumn'
 		}>
 			</div>
