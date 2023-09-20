@@ -47,10 +47,7 @@ footer {
     background-color: #f0f0f0;
 }
 
-.xo-canvas-column .card-body
-{
-    text-align: left;
-}
+
 .xo-canvas-column .nav li
 {
     border-bottom: blue;
@@ -62,11 +59,11 @@ footer {
     color: blue;
 }
 
-.xo-canvas-leftcolumn .card-header {
+.xo-canvas-leftcolumn .nav-heading {
     text-align: left;
 }
 
-.xo-canvas-rightcolumn .card-header {
+.xo-canvas-rightcolumn .nav-heading {
     text-align : right;
 }
 
