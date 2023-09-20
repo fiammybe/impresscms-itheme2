@@ -15,11 +15,11 @@ footer {
     font-weight: bold;
 }
 
-.card {
+.card  {
     border: none;
 }
 
-.xo-block .card-header
+.card-header
 {
     color: blue;
     border-bottom-width : 3px;
@@ -38,7 +38,7 @@ footer {
     font-weight: bold;
 }
 
-.xo-page .xo-block .card-body {
+.xo-block .card-body {
     background-color: #f0f0f0;
 }
 
