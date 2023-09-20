@@ -15,6 +15,11 @@ footer {
     font-weight: bold;
 }
 
+.nav-heading {
+    font-size: x-large;
+    padding: 8px;
+}
+
 .card  {
     border: none;
 }
