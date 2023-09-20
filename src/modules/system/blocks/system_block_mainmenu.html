@@ -1,4 +1,4 @@
-	<li class="nav-item"><a <{if $xoops_dirname=='system'}>class="nav-link active"<{/if}> href="<{$xoops_url}>/" title="<{$block.lang_home}>"><{$block.lang_home}></a></li>
+	<li class="nav-item"><a class="nav-link<{if $xoops_dirname=='system'}> active<{/if}>" href="<{$xoops_url}>/" title="<{$block.lang_home}>"><{$block.lang_home}></a></li>
 	<{foreach item=module from=$block.modules}>
 	<li class="nav-item">
 		<a class="nav-link<{if $xoops_dirname==$module.directory}> active<{/if}>" href="<{$xoops_url}>/modules/<{$module.directory}>/" title="<{$module.name}>"><{$module.name}></a>
@@ -11,5 +11,5 @@
 	<{/foreach}>
 
 	<{if $block.priv_enabled == true}>
-	<li class="nav-item"><a class="nav-link <{if $xoops_dirname=='system'}> actlink<{/if}>" href="<{$xoops_url}>/privpolicy.php" title="<{$block.lang_privpolicy}>"><{$block.lang_privpolicy}></a></li>
+	<li class="nav-item"><a class="nav-link<{if $xoops_dirname=='system'}> active<{/if}>" href="<{$xoops_url}>/privpolicy.php" title="<{$block.lang_privpolicy}>"><{$block.lang_privpolicy}></a></li>
 	<{/if}>
