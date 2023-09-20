@@ -23,7 +23,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <{includeq file="$theme_name/templates/blockszone_menu.html.tpl" blocks=$xoBlocks.menu zoneId="menu"}>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-md-none">
                 <{includeq file="$theme_name/templates/blockszone_menu.html.tpl" blocks=$xoBlocks.canvas_left zoneId="menu"}>
+                <{includeq file="$theme_name/templates/blockszone_menu.html.tpl" blocks=$xoBlocks.canvas_right zoneId="menu"}>
             </ul>
         </div>
     </div>
