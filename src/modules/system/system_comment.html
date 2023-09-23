@@ -1,90 +1,34 @@
-  <div class="card mb-4">
-      <div class="d-flex card-header"><{$comment.title}></div>
-        <{if $xoops_iscommentadmin == true}>
-        <div class="d-flex justify-content-end">
-        <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><i class="bi-pencil"></i><span class="small"> <{$lang_edit}> </span></a>
-        <a href="<{$deletecomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_delete}>"><i class="bi-trash3"></i><span class="small"> <{$lang_delete}> </span></a>
-        <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
-        </div>
-        <{elseif $xoops_isuser == true && $xoops_userid == $comment.poster.id}>-->
-        <div class="d-flex justify-content-end">
-        <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><i class="bi-pencil"></i><span class="small"> <{$lang_edit}> </span></a>
-        <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
-        </div>
-        <{elseif $xoops_isuser == true || $anon_canpost == true}>
-        <div class="d-flex justify-content-end">
-        <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
-        </div>
-        <{/if}>
 
-    <div class="card-body">
-      <p><{$comment.text}></p>
 
-      <div class="d-flex justify-content-between">
-        <div class="d-flex flex-row align-items-center">
-          <img
-                  src="<{$comment.poster.avatar}>"
-                  alt="avatar"
-                  width="25"
-                  height="25"
-          />
-          <p class="small mb-0 ms-2"><{$comment.poster.uname}> - </p>
+  <div class="d-flex flex-start mt-4">
+    <img class="rounded-circle shadow-1-strong me-3" src="<{$comment.poster.avatar}>" alt="avatar" width="65" height="65">
+    <div class="flex-grow-1 flex-shrink-1">
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="mb-1">
+            <{$comment.poster.uname}> <span class="small">- <{$comment.date_posted}></span>
+          </p>
+
+          <{if $xoops_iscommentadmin == true}>
+          <div class="d-flex justify-content-end">
+            <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><i class="bi-pencil"></i><span class="small"> <{$lang_edit}> </span></a>
+            <a href="<{$deletecomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_delete}>"><i class="bi-trash3"></i><span class="small"> <{$lang_delete}> </span></a>
+            <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
+          </div>
+          <{elseif $xoops_isuser == true && $xoops_userid == $comment.poster.id}>-->
+          <div class="d-flex justify-content-end">
+            <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><i class="bi-pencil"></i><span class="small"> <{$lang_edit}> </span></a>
+            <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
+          </div>
+          <{elseif $xoops_isuser == true || $anon_canpost == true}>
+          <div class="d-flex justify-content-end">
+            <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><i class="bi-reply"></i><span class="small"> <{$lang_reply}> </span></a>
+          </div>
+          <{/if}>
         </div>
+        <p class="small mb-0">
+          <{$comment.text}>
+        </p>
       </div>
     </div>
   </div>
-
-
-
-
-  <!--&lt;!&ndash; start comment post &ndash;&gt;-->
-  <!--        <tr>-->
-  <!--          <td class="head"><a id="comment<{$comment.id}>"></a> <{$comment.poster.uname}></td>-->
-  <!--          <td class="head"><div class="comDate"><span class="comDateCaption"><{$lang_posted}>:</span> <{$comment.date_posted}>&nbsp;&nbsp;<span class="comDateCaption"><{$lang_updated}>:</span> <{$comment.date_modified}></div></td>-->
-  <!--        </tr>-->
-  <!--        <tr>-->
-
-  <!--          <{if $comment.poster.id != 0}>-->
-
-  <!--          <td class="odd"><div class="comUserRank"><div class="comUserRankText"><{$comment.poster.rank_title}></div><img class="comUserRankImg" src="<{$comment.poster.rank_image}>" alt="" /></div><img class="comUserImg" src="<{$comment.poster.avatar}>" alt="" /><div class="comUserStat"><span class="comUserStatCaption"><{$lang_joined}>:</span> <{$comment.poster.regdate}></div><div class="comUserStat"><span class="comUserStatCaption"><{$lang_from}>:</span> <{$comment.poster.from}></div><div class="comUserStat"><span class="comUserStatCaption"><{$lang_posts}>:</span> <{$comment.poster.postnum}></div><div class="comUserStatus"><{$comment.poster.status}></div></td>-->
-
-  <!--          <{else}>-->
-
-  <!--          <td class="odd"> </td>-->
-
-  <!--          <{/if}>-->
-
-  <!--          <td class="odd">-->
-  <!--            <div class="comTitle"><{$comment.image}><{$comment.title}></div><div class="comText"><{$comment.text}></div>-->
-  <!--          </td>-->
-  <!--        </tr>-->
-  <!--        <tr>-->
-  <!--          <td class="even"></td>-->
-
-  <!--          <{if $xoops_iscommentadmin == true}>-->
-
-  <!--          <td class="even" align="<{$smarty.const._GLOBAL_RIGHT}>">-->
-  <!--            <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/edit.gif" alt="<{$lang_edit}>" /></a><a href="<{$deletecomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_delete}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/delete.gif" alt="<{$lang_delete}>" /></a><a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/reply.gif" alt="<{$lang_reply}>" /></a>-->
-  <!--          </td>-->
-
-  <!--          <{elseif $xoops_isuser == true && $xoops_userid == $comment.poster.id}>-->
-
-  <!--          <td class="even" align="<{$smarty.const._GLOBAL_RIGHT}>">-->
-  <!--            <a href="<{$editcomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_edit}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/edit.gif" alt="<{$lang_edit}>" /></a><a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/reply.gif" alt="<{$lang_reply}>" /></a>-->
-  <!--          </td>-->
-
-  <!--          <{elseif $xoops_isuser == true || $anon_canpost == true}>-->
-
-  <!--          <td class="even" align="<{$smarty.const._GLOBAL_RIGHT}>">-->
-  <!--            <a href="<{$replycomment_link}>&amp;com_id=<{$comment.id}>" title="<{$lang_reply}>"><img src="<{$xoops_url}>/images/icons/<{$icms_langname}>/reply.gif" alt="<{$lang_reply}>" /></a>-->
-  <!--          </td>-->
-
-  <!--          <{else}>-->
-
-  <!--          <td class="even"> </td>-->
-
-  <!--          <{/if}>-->
-
-  <!--        </tr>-->
-  <!--&lt;!&ndash; end comment post &ndash;&gt;-->
-
