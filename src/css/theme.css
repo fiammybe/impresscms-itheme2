@@ -28,7 +28,7 @@ footer {
 {
     color: blue;
     border-bottom-width : 3px;
-    border-bottom-color : coral;
+    border-bottom-color : #F3AC03;
     text-align: center;
     background-color: white;
     font-weight: bold;
@@ -36,7 +36,7 @@ footer {
 
 .xo-canvas-column .nav-heading
 {
-    color: coral;
+    color: #F3AC03;
     border-bottom-width : 1px;
     border-bottom-style: dashed;
     border-bottom-color : dodgerblue;
