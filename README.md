@@ -1,10 +1,7 @@
-# Bootstrap 5 ImpressCMS Theme
+# ImpressCMS iTheme 2.0
 
-Include [Bootstrap](https://getbootstrap.com)'s code from a CDN
-
-## Edit in browser
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=src%2Findex.html)
+## What is it
+The ImpressCMS iTheme built on Bootstrap 5. The focus is to use a maximum of Bootstrap elements, and a minimum of CSS directives specific for the theme.
 
 ## How to use
 
