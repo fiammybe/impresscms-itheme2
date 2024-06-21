@@ -1,8 +1,8 @@
 <form class="navbar-form form-inline my-2 my-lg-0" action="<{$xoops_url}>/search.php" method="get" role="search">
+  <input type="hidden" name="action" value="results" />
   <div class="input-group">
   <input class="form-control me-2" type="search" name="query" size="14" placeholder="Search" />
-  <input type="hidden" name="action" value="results" />
-  <span class="btn btn-outline-success" type="submit"><{$block.lang_search}></span>
+  <span class="btn btn-outline" type="submit"><{$block.lang_search}></span>
   </div>
 </form>
 <a href="<{$xoops_url}>/search.php" title="<{$block.lang_advsearch}>"><{$block.lang_advsearch}></a>
