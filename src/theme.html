@@ -31,19 +31,24 @@
 		</div>
 		<{/if}>
 		<div class="col-md-8 col-xs-12 xo-page">
+			<{if $xoBlocks.breadcrumbs}>
+			<{includeq file="$theme_name/modules/system/system_breadcrumb.html"}>
+			<{/if}>
+			<{if $xoBlocks.page_topleft || $xoBlocks.page_topcenter || $xoBlocks.page_topright}>
 			<div class="container">
 				<div class="row xo-page-topblocks">
 						<{if $xoBlocks.page_topleft}>
-						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topleft zoneClass="zone_page_topleft" zoneId='xo-canvas-topleft' zoneContainer=0}>
+						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topleft zoneClass="zone_page_topleft" zoneId='xo-canvas-topleft'}>
 						<{/if}>
 						<{if $xoBlocks.page_topcenter}>
-						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topcenter zoneClass="zone_page_topcenter" zoneId='xo-canvas-topcenter' zoneContainer=0}>
+						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topcenter zoneClass="zone_page_topcenter" zoneId='xo-canvas-topcenter'}>
 						<{/if}>
 						<{if $xoBlocks.page_topright}>
-						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topright zoneClass="zone_page_topright" zoneId='xo-canvas-topright' zoneContainer=0}>
+						<{includeq file="$theme_name/templates/blockszone.html.tpl" blocks=$xoBlocks.page_topright zoneClass="zone_page_topright" zoneId='xo-canvas-topright'}>
 						<{/if}>
 				</div>
 			</div>
+			<{/if}>
 			<{if $icms_contents}>
 			<div class="container">
 			<div class="row">
