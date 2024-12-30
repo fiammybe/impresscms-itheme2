@@ -1,3 +1,9 @@
 <{if !$content_category_path}>
-<{includeq file="$theme_name/modules/system/system_breadcrumb.html" icms_breadcrumb_items=$content_category_path}>
+<{includeq file="$theme_name/modules/system/system_breadcrumb.html" icms_breadcrumb_items=$content_module_home}>
+<!--<nav aria-label="breadcrumb" class="my-2">
+	<ol class="breadcrumb">
+		<{if $content_module_home}><li class="breadcrumb-item"><{$content_module_home}></li><{/if}>
+		<{$content_category_path}>
+	</ol>
+</nav>-->
 <{/if}>
