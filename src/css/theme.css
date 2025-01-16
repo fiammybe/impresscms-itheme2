@@ -18,6 +18,7 @@ footer {
 .nav-heading {
     font-size: x-large;
     padding: 8px;
+    margin-bottom: 6px;
 }
 
 .card  {
@@ -41,6 +42,8 @@ footer {
     border-bottom-style: dashed;
     border-bottom-color : dodgerblue;
     font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 4px;
 }
 
 .xo-block .card-body {
@@ -50,13 +53,16 @@ footer {
 
 .xo-canvas-column .nav li
 {
-    border-bottom: blue;
+    border-bottom: #666;
     border-bottom-style: dashed;
     border-bottom-width: 1px;
 }
 .xo-canvas-column .nav li a
 {
-    color: blue;
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .75em;
 }
 
 .xo-canvas-leftcolumn .nav-heading {
@@ -81,3 +87,7 @@ footer {
     font-weight: bold;
 }
 
+.container h1 a {
+    color: #666;
+    text-decoration: none;
+}
